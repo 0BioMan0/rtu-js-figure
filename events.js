@@ -16,15 +16,11 @@ $(function () {
         });
     });
 
-    // color picker initialization and event
-    $('#color-picker').colorpicker({
-        parts: ['map', 'bar'],
-        color: '#2278da',
-        select: function (event, colorPicker) {
-            $figure.css({
-                backgroundColor: '#' + colorPicker.formatted
-            });
-        }
+    // color picker event
+    $('#color-picker').on('colorpickerselect', function (event, colorPicker) {
+        $figure.css({
+            backgroundColor: '#' + colorPicker.formatted
+        });
     });
 
     // move events
