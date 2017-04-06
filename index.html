@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Events</title>
+    <link rel="stylesheet" href="assets/jquery-ui/jquery-ui.css">
+    <link rel="stylesheet" href="assets/colorpicker/jquery.colorpicker.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="wrapper">
+    <div class="controls">
+        <div class="control-item">
+            <div class="label">Size:</div>
+            <div id="size-slider">
+                <div id="size-handle" class="ui-slider-handle"></div>
+            </div>
+        </div>
+
+        <div class="control-item">
+            <div class="label">Rotation angle:</div>
+            <div id="angle-slider">
+                <div id="angle-handle" class="ui-slider-handle"></div>
+            </div>
+        </div>
+
+        <div class="control-item">
+            <div class="label">Color:</div>
+            <div id="color-picker"></div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="square-wrapper">
+            <div class="square"></div>
+        </div>
+    </div>
+</div>
+
+<script src="assets/jquery/jquery-1.12.4.js"></script>
+<script src="assets/jquery-ui/jquery-ui.js"></script>
+<script src="assets/colorpicker/jquery.colorpicker.js"></script>
+<script src="events.js"></script>
+
+<script>
+    $(function () {
+        // sliders initialization
+        $('#size-slider').slider({
+            min: 5,
+            max: 300,
+            value: 100,
+            range: "min",
+            create: function () {
+                $("#size-handle").text($(this).slider('value'));
+            },
+            slide: function (event, ui) {
+                $("#size-handle").text(ui.value);
+            }
+        });
+
+        $('#angle-slider').slider({
+            min: 0,
+            max: 360,
+            value: 0,
+            range: "min",
+            create: function () {
+                $("#angle-handle").text($(this).slider('value'));
+            },
+            slide: function (event, ui) {
+                $("#angle-handle").text(ui.value);
+            }
+        });
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.controls {
+    width: 380px;
+    background-color: #ccc;
+    padding: 10px 30px;
+    box-sizing: border-box;
+}
+
+.control-item {
+    margin-bottom: 15px;
+}
+
+.control-item .label {
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.ui-slider .ui-slider-handle {
+    width: 30px;
+    text-align: center;
+}
+
+.container {
+    position: relative;
+    float: left;
+    background-color: #ddd;
+    width: 100%;
+    overflow: hidden;
+}
+
+.square-wrapper {
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    overflow: visible;
+}
+
+.square {
+    width: 100px;
+    height: 100px;
+    background-color: #2278da;
+    border: 2px solid #ff0;
+    box-sizing: border-box;
+    cursor: move;
+}
